@@ -1,0 +1,1025 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+.navbar {
+    width: 100%;
+    padding: 18px 85px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.logo span {
+    color: #0284c7;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    list-style: none;
+}
+
+.nav-menu li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.nav-menu a:hover {
+    color: #0284c7;
+}
+
+.login-btn,
+.user-btn {
+    height: 44px;
+    padding: 0 22px;
+    border-radius: 30px;
+    background: #0284c7;
+    color: white !important;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-weight: 700;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.user-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 58px;
+    width: 230px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+    padding: 18px;
+    text-align: left;
+}
+
+.dropdown h4 {
+    color: #0284c7;
+    margin-bottom: 12px;
+}
+
+.dropdown a {
+    display: block;
+    padding: 12px 8px;
+    border-radius: 10px;
+    color: #0f172a !important;
+}
+
+.dropdown a:hover {
+    background: #e0f2fe;
+}
+
+.user-menu:hover .dropdown {
+    display: block;
+}
+
+.hero {
+    min-height: 92vh;
+    padding: 120px 85px;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(0,0,0,0.65),
+            rgba(0,0,0,0.25)
+        ),
+        url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+.hero-text {
+    max-width: 650px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-card {
+    background: white;
+    border-radius: 25px;
+    padding: 35px;
+
+    transition: all 0.4s ease;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.hero-card:hover {
+     transform: translateY(-12px) scale(1.03);
+
+    box-shadow:
+        0 25px 50px rgba(0,0,0,0.25);
+}
+
+.hero-card h2 {
+    transition: 0.3s ease;
+}
+
+.hero-card:hover h2 {
+    transform: scale(1.08);
+}
+
+.hero-label,
+.section-label {
+    color: #f97316;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.hero-desc {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #e2e8f0;
+    margin-bottom: 34px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: 800;
+}
+
+.btn-primary,
+.btn {
+    background: #f97316;
+    color: white;
+}
+
+.btn-primary:hover,
+.btn:hover {
+    background: #ea580c;
+}
+
+.btn-secondary {
+    background: white;
+    color: #0284c7;
+}
+
+.hero-card {
+    width: 280px;
+    background: white;
+    color: #0f172a;
+    padding: 28px;
+    border-radius: 24px;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.25);
+}
+
+.hero-card h3 {
+    color: #0284c7;
+    margin-bottom: 16px;
+}
+
+.hero-card h2 {
+    font-size: 34px;
+    color: #f97316;
+    margin: 8px 0;
+}
+
+.features {
+    width: 86%;
+    margin: -70px auto 0;
+    position: relative;
+    z-index: 10;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.feature-box {
+    background: white;
+    padding: 32px 35px;
+    min-height: 150px;
+
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+
+    position: relative;
+    overflow: hidden;
+
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+
+.feature-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 5px;
+
+    background: #f97316;
+    transition: 0.4s ease;
+}
+
+.feature-box:hover::before {
+    width: 100%;
+}
+
+.feature-box:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 22px 45px rgba(0,0,0,0.18);
+}
+
+
+.feature-box h3 {
+    margin-bottom: 12px;
+    color: #0284c7;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.feature-box:hover h3 {
+    color: #f97316;
+}
+
+.feature-box p {
+    line-height: 1.7;
+    color: #475569;
+    font-size: 16px;
+}
+
+.about {
+    padding: 110px 85px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.about-img {
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.about-img img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.about-img:hover img {
+    transform: scale(1.08);
+    filter: brightness(0.85);
+}
+
+.about-text h2,
+.layanan h2,
+.destinasi h2,
+.testimoni h2,
+.contact h2 {
+    font-size: 42px;
+    margin-bottom: 22px;
+}
+
+.about-text p {
+    color: #475569;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.about-list {
+    margin-top: 24px;
+}
+
+.about-list p {
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.layanan,
+.destinasi,
+.testimoni {
+    padding: 95px 85px;
+    text-align: center;
+}
+
+.layanan {
+    background: #eff6ff;
+}
+
+.service-container,
+.destination-container,
+.testimonial-container {
+    margin-top: 42px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.service-card,
+.testimonial-card {
+    background: white;
+
+    padding: 40px 30px;
+
+    border-radius: 24px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.service-card:hover,
+.destination-card:hover,
+.testimonial-card:hover {
+    transform: translateY(-8px);
+}
+
+.testimonial-card img {
+    width: 95px;
+    height: 95px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    margin-bottom: 20px;
+
+    border: 4px solid #f1f5f9;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.testimonial-card .stars {
+    color: #f59e0b;
+
+    font-size: 22px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+.testimonial-card p {
+    color: #64748b;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+
+    font-style: italic;
+}
+
+.testimonial-card h4 {
+    color: #0f2557;
+
+    font-size: 24px;
+
+    margin-bottom: 8px;
+}
+
+.testimonial-card span {
+    color: #94a3b8;
+
+    font-size: 16px;
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #e0f2fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.service-card h3,
+.destination-card h3 {
+    color: #0284c7;
+    margin-bottom: 12px;
+}
+
+.service-card p,
+.testimonial-card p {
+    color: #475569;
+    line-height: 1.7;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+    text-align: left;
+    transition: 0.3s;
+}
+
+.destination-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.destination-content {
+    padding: 24px;
+}
+
+.destination-content span {
+    color: #f97316;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.destination-content h3 {
+    margin: 10px 0;
+}
+
+.destination-content p {
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.testimoni {
+    background: #eff6ff;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 22px;
+}
+
+.testimonial-card h4 {
+    color: #0284c7;
+    margin-bottom: 5px;
+}
+
+.testimonial-card span {
+    color: #64748b;
+}
+
+.contact {
+    padding: 85px;
+    background: linear-gradient(135deg, #0284c7, #0f172a);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 45px;
+}
+
+.contact h2 {
+    color: white;
+}
+
+.contact p {
+    line-height: 1.8;
+}
+
+.contact-box {
+    background: rgba(255,255,255,0.14);
+    padding: 28px;
+    border-radius: 22px;
+    min-width: 320px;
+}
+
+.footer {
+    background:
+        linear-gradient(rgba(10, 31, 68, 0.96), rgba(10, 31, 68, 0.96)),
+        url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 85px 25px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.4fr;
+    gap: 60px;
+    padding-bottom: 55px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.footer-brand h2 {
+    font-size: 42px;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.footer-brand h2 span {
+    color: #f97316;
+}
+
+.footer-brand p,
+.footer-column p {
+    color: #cbd5e1;
+    line-height: 1.8;
+}
+
+.footer-column h3 {
+    color: #f97316;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.footer-column a {
+    display: block;
+    color: #dbeafe;
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+
+.footer-column a:hover {
+    color: #f97316;
+}
+
+.footer-column p {
+    margin-bottom: 16px;
+}
+
+.footer-bottom {
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #93c5fd;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 900px) {
+    .footer {
+        padding: 65px 25px 25px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Modal Login Berhasil */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.success-modal {
+    width: 370px;
+    background: white;
+    padding: 36px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+}
+
+.check-icon {
+    width: 95px;
+    height: 95px;
+    background: #0284c7;
+    color: white;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    font-size: 58px;
+    line-height: 95px;
+    font-weight: bold;
+}
+
+.success-modal h2 {
+    margin-bottom: 10px;
+}
+
+.success-modal p {
+    color: #475569;
+    margin-bottom: 22px;
+}
+
+.success-modal button {
+    background: #f97316;
+    color: white;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 25px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* Login page tetap aman */
+.login-page {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(2,132,199,0.7), rgba(15,23,42,0.7)),
+        url("../images/bali.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 400px;
+    background: white;
+    padding: 40px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+}
+
+.login-container h2 {
+    color: #0284c7;
+    margin-bottom: 10px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 13px;
+    margin: 10px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 15px;
+    background: #f97316;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.login-info {
+    margin-top: 20px;
+    background: #e0f2fe;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #0284c7;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        padding: 18px 25px;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+
+
+    .features,
+    .service-container,
+    .destination-container,
+    .testimonial-container,
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        margin-top: 30px;
+    }
+
+    .about,
+    .layanan,
+    .destinasi,
+    .testimoni,
+    .contact {
+        padding: 70px 25px;
+    }
+
+    .contact {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-box {
+        min-width: 100%;
+    }
+
+    .login-container {
+        width: 90%;
+    }
+}
+
+/* ==========================
+   TRAVEL PARALLAX BANNER
+========================== */
+
+.travel-banner {
+    position: relative;
+
+    min-height: 550px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 100px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+    overflow: hidden;
+}
+
+.travel-banner::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(10, 25, 60, 0.88) 0%,
+        rgba(10, 25, 60, 0.70) 35%,
+        rgba(10, 25, 60, 0.30) 100%
+    );
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 650px;
+
+    color: white;
+}
+
+.banner-label {
+    color: #f59e0b;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+.banner-content h2 {
+    font-size: 58px;
+
+    line-height: 1.15;
+
+    margin-bottom: 25px;
+
+    font-weight: 800;
+}
+
+.banner-content p {
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: #e2e8f0;
+
+    margin-bottom: 35px;
+}
+
+.banner-btn {
+    display: inline-block;
+
+    color: #f59e0b;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.banner-btn:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
+/* ==========================
+   BACKGROUND DESTINASI
+========================== */
+
+.bali-banner {
+    background-image: url("../images/bali.jpg");
+}
+
+.bromo-banner {
+    background-image: url("../images/bromo.jpg");
+}
+
+.rajaampat-banner {
+    background-image: url("../images/rajaampat.jpg");
+}
+
+.lombok-banner {
+    background-image: url("../images/lombok.jpg");
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media screen and (max-width: 768px) {
+
+    .travel-banner {
+        min-height: 450px;
+
+        padding: 60px 25px;
+
+        background-attachment: scroll;
+    }
+
+    .banner-content {
+        max-width: 100%;
+    }
+
+    .banner-content h2 {
+        font-size: 36px;
+    }
+
+    .banner-content p {
+        font-size: 15px;
+    }
+}
+
+.destination-card {
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+    text-align: left;
+    transition: 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.destination-content {
+    padding: 26px;
+}
+
+.destination-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.destination-header h3 {
+    font-size: 24px;
+    color: #0f2557;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 14px;
+    color: #64748b;
+    white-space: nowrap;
+}
+
+.price span {
+    font-size: 26px;
+    font-weight: 800;
+    color: #0f2557;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+    color: #64748b;
+}
+
+.stars {
+    color: #f59e0b;
+    letter-spacing: 2px;
+    font-size: 17px;
+}
+
+.destination-content p {
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.book-btn {
+    display: inline-block;
+    background: #fb923c;
+    color: white;
+    padding: 13px 26px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.book-btn:hover {
+    background: #f97316;
+}
