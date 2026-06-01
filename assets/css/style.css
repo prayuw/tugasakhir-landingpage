@@ -1019,3 +1019,119 @@ body {
 .book-btn:hover {
     background: #f97316;
 }
+
+/* PROFILE PAGE */
+.profile {
+    min-height: 100vh;
+    background: linear-gradient(
+        rgba(15,23,42,0.75),
+        rgba(15,23,42,0.75)
+    ),
+    url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 120px 20px;
+}
+
+.profile-box {
+    width: 100%;
+    max-width: 650px;
+
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+
+    border-radius: 25px;
+    padding: 40px;
+
+    text-align: center;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.profile-box h1 {
+    font-size: 36px;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.profile-box h2 {
+    color: #0ea5e9;
+    margin-bottom: 20px;
+}
+
+.profile-box p {
+    color: #475569;
+    line-height: 1.8;
+}
+
+.profile-info {
+    margin-top: 25px;
+
+    background: #f8fafc;
+    border-radius: 15px;
+
+    padding: 20px;
+    text-align: left;
+}
+
+.profile-info p {
+    margin: 10px 0;
+}
+
+.profile .btn {
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 14px 28px;
+
+    background: #f97316;
+    color: white;
+
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.profile .btn:hover {
+    background: #ea580c;
+    transform: translateY(-3px);
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    list-style: none;   /* hilangkan titik */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #0f172a;
+    font-weight: 600;
+}
+
+.login-btn {
+    background: #0ea5e9;
+    color: white !important;
+
+    padding: 12px 24px;
+    border-radius: 999px;
+
+    text-decoration: none;
+    display: inline-block;
+}

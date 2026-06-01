@@ -24,7 +24,7 @@ class AuthController
             $_SESSION['name'] = $username;
             $_SESSION['login_success'] = true;
 
-            header("Location: index.php");
+            header("Location: index.php?page=profile");
             exit;
         } else {
             echo "<script>
