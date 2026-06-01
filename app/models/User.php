@@ -15,4 +15,3 @@ class User extends Database
         return $this->conn->query($query);
     }
 }
-?>

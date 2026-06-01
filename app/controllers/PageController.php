@@ -17,4 +17,3 @@ class PageController
         include "app/views/profile.php";
     }
 }
-?>

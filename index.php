@@ -26,4 +26,3 @@ switch ($page) {
         $pageController->landing();
         break;
 }
-?>
