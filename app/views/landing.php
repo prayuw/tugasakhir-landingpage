@@ -25,7 +25,7 @@
             <?php if (isset($_SESSION['login'])) : ?>
                 <li class="user-menu">
                     <button class="user-btn">
-                        👤 <?= $_SESSION['username']; ?> ▾
+                        <?= $_SESSION['username']; ?> ▾
                     </button>
 
                     <div class="dropdown">
@@ -344,7 +344,7 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="footer-container">
 
             <div class="footer-brand">
