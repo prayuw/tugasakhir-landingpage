@@ -13,6 +13,10 @@ if (isset($_POST['login'])) {
     $auth->login($_POST['username'], $_POST['password']);
 }
 
+if (isset($_POST['register'])) {
+    $auth->register($_POST['username'], $_POST['password']);
+}
+
 switch ($page) {
     case 'login':
         $auth->showLogin();
@@ -22,7 +26,19 @@ switch ($page) {
         $pageController->profile();
         break;
 
+    case 'register':
+        $auth->showRegister();
+        break;
+
     default:
         $pageController->landing();
         break;
+}
+
+if (isset($_POST['register'])) {
+
+    $auth->register(
+        $_POST['username'],
+        $_POST['password']
+    );
 }

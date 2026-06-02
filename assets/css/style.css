@@ -1135,3 +1135,71 @@ body {
     text-decoration: none;
     display: inline-block;
 }
+
+.login-section{
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(2, 132, 199, 0.7), rgba(15, 23, 42, 0.7)),
+        url("../images/bali.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box{
+    position:relative;
+    z-index:2;
+    width:380px;
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.login-box h2{
+    color:#0e83cd;
+    margin-bottom:15px;
+}
+
+.login-box p{
+    margin-bottom:20px;
+}
+
+.login-box input{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border:1px solid #d1d5db;
+    border-radius:12px;
+}
+
+.login-box button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:#ff6b00;
+    color:white;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.login-box button:hover{
+    background:#e55f00;
+}
+
+.back-home {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #0e83cd;
+    font-weight: 600;
+}
+
+.back-home:hover {
+    text-decoration: underline;
+}
